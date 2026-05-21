@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Forgot Password</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #4b6cb7);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background: rgba(255,255,255,0.15);
+    padding: 40px;
+    width: 350px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #219150;
+}
+
+.back {
+    margin-top: 15px;
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Forgot Password</h2>
+
+<form action="send_otp.php" method="POST">
+
+    <input type="text" name="username" placeholder="Username" required>
+
+    <select name="role" id="role" onchange="toggleEmail()" required>
+        <option value="">Select Role</option>
+        <option value="admin">Admin</option>
+        <option value="doctor">Doctor</option>
+        <option value="patient">Patient</option>
+    </select>
+
+    <!-- Email field (hidden initially) -->
+    <input type="email" id="email" name="email" placeholder="Enter Email" style="display:none;">
+
+    <button type="submit">Proceed</button>
+
+</form>
+
+<a href="login.html" class="back">Back to Login</a>
+
+</div>
+
+<script>
+function toggleEmail(){
+    let role = document.getElementById("role").value;
+    let emailField = document.getElementById("email");
+
+    if(role === "admin" || role === "doctor"){
+        emailField.style.display = "block";
+        emailField.required = true;
+    } else {
+        emailField.style.display = "none";
+        emailField.required = false;
+    }
+}
+</script>
+
+</body>
+</html>
