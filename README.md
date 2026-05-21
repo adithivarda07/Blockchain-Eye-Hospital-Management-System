@@ -22,3 +22,29 @@ A full-stack healthcare management system for secure patient record handling, bl
 
 ## Team
 Team of 3
+
+## Screenshots
+
+### Login Page
+![Login](screenshots/login.png)
+
+### Doctor Dashboard
+![Doctor Dashboard](screenshots/doctor_dashboard.png)
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/admin_dashboard.png)
+
+### Admin Dashboard – Tamper Detection
+![Admin Dashboard Tamper](screenshots/admin_dashboard_tamper.png)
+
+### Tamper Detection
+![Tamper Detection](screenshots/tamper_detection.png)
+
+### Analytics Dashboard
+![Analytics Dashboard](screenshots/analytics_dashboard.png)
+
+### Treatment & Outcome Analysis
+![Treatment Analysis](screenshots/analytics_treatment_analysis.png)
+
+### Geographical Patient Distribution
+![Geographical Distribution](screenshots/analytics_geographical_distribution.png)
